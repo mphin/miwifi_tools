@@ -27,7 +27,7 @@ mount --bind /data/root /root
 注意：开机会失效，按照上面的方法将mount --bind /data/root /root添加进开机启动脚本
 
 ## AX5400 SFTP连接不上？
-原因是小米路由默认没有安装SFTP
+原因是小米路由默认没有安装SFTP  
 解决办法：
 ```
 cp -rp /usr/libexec /data/usr/

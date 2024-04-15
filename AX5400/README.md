@@ -13,8 +13,7 @@ chmod +x auto_ssh.sh
 ./auto_ssh.sh install
 ```
 ## AX5400修改了/etc/rc.local开机启动脚本自动还原为空？  
-解决办法：通过防火墙添命令添加自启动脚本  
-https://www.right.com.cn/forum/thread-8340357-1-1.html  
+解决办法：[通过防火墙添命令添加自启动脚本](https://github.com/mphin/Mi_Route_Tool?tab=readme-ov-file#%E9%80%9A%E8%BF%87%E9%98%B2%E7%81%AB%E5%A2%99%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC)  
 注意：如果没效果可能需要增加sleep增加延迟启动，比如添加路由表route add命令，我试过必须要添加sleep延迟才正常
 
 

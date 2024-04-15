@@ -1,7 +1,7 @@
 # Mi_Route_Tool
 小米AX3600 小米AX5400电竞版 SSH相关工具备份  
-[AX3600SSH步骤](https://github.com/mphin/Mi_Route_Tool/tree/main/AX3600#ax3600_ssh%E6%AD%A5%E9%AA%A4)  [AX3600固化步骤](https://github.com/mphin/Mi_Route_Tool/tree/main/AX3600#ax3600_%E5%9B%BA%E5%8C%96%E6%AD%A5%E9%AA%A4)  
-[AX5400固化步骤](https://github.com/mphin/Mi_Route_Tool/tree/main/AX5400#ax5400%E5%9B%BA%E5%8C%96%E6%AD%A5%E9%AA%A4)
+[AX3600相关步骤](https://github.com/mphin/Mi_Route_Tool/tree/main/AX3600/README.md)  
+[AX5400相关步骤](https://github.com/mphin/Mi_Route_Tool/tree/main/AX5400/README.md)
 ## 新版SSH步骤：
 > 不含SSH固化  
 

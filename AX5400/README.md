@@ -32,6 +32,7 @@ mount --bind /data/root /root
 ```
 cp -rp /usr/libexec /data/usr/
 mount --bind /data/usr/libexec /usr/libexec
+curl -o /usr/libexec/sftp-server "https://fastly.jsdelivr.net/gh/mphin/Mi_Route_Tool@main/AX5400/sftp-server"
+chmod 0755 /usr/libexec/sftp-server
 ```
-然后将附件解压放入到/usr/libexec目录，记得加0755权限
 最后将mount --bind /data/usr/libexec /usr/libexec按照上面的方法添加进开机启动脚本

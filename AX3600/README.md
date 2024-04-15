@@ -1,4 +1,3 @@
-#### 老版本教程:
 ## AX3600_SSH步骤：
 1.替换&lt;STOK&gt; 打开  
 ```
@@ -34,7 +33,6 @@ opkg install --force-overwrite wget unzip -d ram && /tmp/usr/bin/wget https://fa
 ```
 会自动固化ssh和计算ssh默认密码并再次重启，复制password:后面的密码保存备用即可  
 完毕。  
-
 ## AX3600_升级丢失ssh步骤：
 ```
 telnet 192.168.31.1
@@ -44,4 +42,9 @@ sed -i 's/channel=.*/channel="debug"/g' /etc/init.d/dropbear
 ```
 ```
 /etc/init.d/dropbear start
+```
+## AX3600_安装sftp：
+```
+opkg update
+opkg install openssh-sftp-server
 ```

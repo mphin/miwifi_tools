@@ -26,7 +26,7 @@ http://192.168.31.1/backup/log/mtd9
 sed -i 's/18\.06-SNAPSHOT/18.06.0/g' /etc/opkg/distfeeds.conf
 ```
 ```
-opkg install --force-overwrite wget unzip -d ram && /tmp/usr/bin/wget https://github.com/paldier/ax3600_tool/releases/latest/download/mitool.zip -O /data/mitool.zip && cd /data/ && /tmp/usr/bin/unzip /data/mitool.zip && /data/mitool_arm64 unlock
+opkg install --force-overwrite wget unzip -d ram && /tmp/usr/bin/wget https://fastly.jsdelivr.net/gh/mphin/Mi_Route_Tool@main/AX3600/mitool.zip -O /data/mitool.zip && cd /data/ && /tmp/usr/bin/unzip /data/mitool.zip && /data/mitool_arm64 unlock
 ```
 重启后执行  
 ```

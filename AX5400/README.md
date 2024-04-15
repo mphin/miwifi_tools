@@ -1,3 +1,4 @@
+## [AX5400SSH步骤](https://github.com/mphin/Mi_Route_Tool/blob/main/README.md#%E6%96%B0%E7%89%88ssh%E6%AD%A5%E9%AA%A4)
 ## AX5400固化步骤：
 ```
 mkdir /data/auto_ssh && cd /data/auto_ssh

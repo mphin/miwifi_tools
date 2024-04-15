@@ -70,7 +70,7 @@ curl -o /data "https://fastly.jsdelivr.net/gh/mphin/Mi_Route_Tool@main/startup_s
 chmod +x /data/startup_script.sh
 /data/startup_script.sh install
 ```
-编辑/data/startup_script.sh文件查找下方内容输入需要执行的开机启动命令
+编辑/data/startup_script.sh文件查找下方修改为需要执行的开机启动命令
 ```
 startup_script() {
         # Put your custom script here.

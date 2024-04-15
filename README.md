@@ -61,3 +61,18 @@ config zone
 	option output 'ACCEPT'
 	option forward 'REJECT'改为 'ACCEPT'
 ```
+## 通过防火墙添加自启动脚本
+> 用于/etc/rc.local文件无效的解决办法
+```
+curl -o /data "https://fastly.jsdelivr.net/gh/mphin/Mi_Route_Tool@main/startup_script.sh"
+chmod +x /data/startup_script.sh
+/data/startup_script.sh install
+```
+编辑/data/startup_script.sh文件查找下方内容输入需要执行的开机启动命令
+```
+startup_script() {
+        # Put your custom script here.
+        echo "Starting custom scripts..."
+}
+```
+> 注意：该防火墙脚本的执行顺序可能优于/etc/init.d/下的的脚本，因此针对某些特殊情况需延迟执行，例如：(sleep 20; xxx) &

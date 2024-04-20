@@ -1,11 +1,9 @@
-# Mi_Route_Tool
-小米AX3600 小米AX5400电竞版 SSH相关工具备份  
 [AX3600相关步骤](https://github.com/mphin/Mi_Route_Tool/tree/main/AX3600/README.md)  
 [AX5400相关步骤](https://github.com/mphin/Mi_Route_Tool/tree/main/AX5400/README.md)
 ## 新版SSH步骤：
 > 不含SSH固化  
 
-`cmd (conhost) / Git Bash / WSL` windows电脑运行这条命令，不要直接CMD，然后替换下面的IP和stok，一条条执行，最后一条命令解锁SSH后在SSH执行，是修改路由器时间到当前时间，根据实际修改
+windows电脑运行这条命令`cmd (conhost) / Git Bash / WSL` 不要直接CMD，然后替换下面的IP和stok，一条条执行，最后一条命令解锁SSH后在SSH执行，是修改路由器时间到当前时间，根据实际修改
 ```
 curl -X GET "http://192.168.2.1/cgi-bin/luci/;stok=1417c7cb89733ba53b0b0934886caec0/api/misystem/set_sys_time?time=2023-2-19%2023:4:47&timezone=CST-8"
 ```
@@ -39,10 +37,12 @@ curl -X POST "http://192.168.2.1/cgi-bin/luci/;stok=1417c7cb89733ba53b0b0934886c
 ```
 curl -X POST "http://192.168.2.1/cgi-bin/luci/;stok=1417c7cb89733ba53b0b0934886caec0/api/xqsmarthome/request_smartcontroller" -d "payload=%7B%22command%22%3A%22scene_start_by_crontab%22%2C%22time%22%3A%223%3A5%22%2C%22week%22%3A0%7D"
 ```
-> "2024-03-11 21:54:30"为当前时间，根据实际修改
 ```
 date -s "2024-03-11 21:54:30"
 ```
+> "2024-03-11 21:54:30"为当前时间，根据实际修改
+
+#### ⚠️⚠️⚠️到此SSH开启成功，重启会失效，需固化SSH
 ## 静态路由防火墙配置：
 开机会失效，需同时添加到在/etc/rc.local文件exit 0前追加
 ```

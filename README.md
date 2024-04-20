@@ -5,7 +5,7 @@
 ## 新版SSH步骤：
 > 不含SSH固化  
 
-cmd (conhost) / Git Bash / WSL #win运行这条命令，不要直接CMD，然后替换下面的IP和stok，一条条执行，最后一条命令解锁SSH后在SSH执行，是修改路由器时间到当前时间，根据实际修改
+`cmd (conhost) / Git Bash / WSL` windows电脑运行这条命令，不要直接CMD，然后替换下面的IP和stok，一条条执行，最后一条命令解锁SSH后在SSH执行，是修改路由器时间到当前时间，根据实际修改
 ```
 curl -X GET "http://192.168.2.1/cgi-bin/luci/;stok=1417c7cb89733ba53b0b0934886caec0/api/misystem/set_sys_time?time=2023-2-19%2023:4:47&timezone=CST-8"
 ```

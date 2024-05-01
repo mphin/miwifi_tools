@@ -1,6 +1,6 @@
 [AX3600相关步骤](https://github.com/mphin/Mi_Route_Tool/tree/main/AX3600/README.md)  
 [AX5400相关步骤](https://github.com/mphin/Mi_Route_Tool/tree/main/AX5400/README.md)
-所以步骤收集于互联网
+
 ## 新版SSH步骤：
 > 不含SSH固化  
 
@@ -46,11 +46,12 @@ date -s "2024-03-11 21:54:30"
 
 #### ⚠️⚠️⚠️到此SSH开启成功，重启会失效，需固化SSH
 ## 静态路由防火墙配置：
-开机会失效，需同时添加到在/etc/rc.local文件exit 0前追加
+开机会失效，需同时添加到在/etc/rc.local文件exit 0前追加   
+> 例如：所有发送到192.168.2.0/24网络的数据包通过网关192.168.31.254进行转发
 ```
-route add -net 192.168.2.0/24 gw 192.168.10.254
+route add -net 192.168.2.0/24 gw 192.168.31.254
 ```
-然后在/etc/config/firewall修改
+然后在/etc/config/firewall找到下面内容修改
 ```
 config defaults
 	option syn_flood '0'
@@ -65,7 +66,7 @@ config zone
 	option network 'lan'
 	option input 'ACCEPT'
 	option output 'ACCEPT'
-	option forward 'REJECT'改为 'ACCEPT'
+	option forward 'REJECT'改为'ACCEPT'
 ```
 ## 通过防火墙添加自启动脚本
 > 用于/etc/rc.local文件无效的解决办法

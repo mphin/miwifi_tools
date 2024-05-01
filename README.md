@@ -1,5 +1,6 @@
 [AX3600相关步骤](https://github.com/mphin/Mi_Route_Tool/tree/main/AX3600/README.md)  
 [AX5400相关步骤](https://github.com/mphin/Mi_Route_Tool/tree/main/AX5400/README.md)
+所以步骤收集于互联网
 ## 新版SSH步骤：
 > 不含SSH固化  
 
@@ -76,8 +77,12 @@ chmod +x /data/startup_script.sh
 编辑/data/startup_script.sh文件查找下方修改为需要执行的开机启动命令
 ```
 startup_script() {
+
         # Put your custom script here.
         echo "Starting custom scripts..."
 }
 ```
 > 注意：该防火墙脚本的执行顺序可能优于/etc/init.d/下的的脚本，因此针对某些特殊情况需延迟执行，例如：(sleep 20; xxx) &
+## 声明
+
+本项目中的所有步骤、文件以及相关信息均搜集自互联网，旨在提供学习和参考之用。我们尊重并遵循知识共享的原则，未经过原创作者许可的情况下，不会用于商业用途。如果您是原始内容的作者，且不希望您的作品出现在此项目中，请联系我们，我们将立即删除相关内容。我们感谢互联网上无数开放共享的资源，为我们提供了学习的机会。

@@ -46,6 +46,7 @@ sed -i 's/channel=.*/channel="debug"/g' /etc/init.d/dropbear
 /etc/init.d/dropbear start
 ```
 ## AX3600_安装sftp：
+> 如报错尝试执行该命令sed -i 's/18\.06-SNAPSHOT/18.06.0/g' /etc/opkg/distfeeds.conf
 ```
 opkg update
 opkg install openssh-sftp-server

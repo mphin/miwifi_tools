@@ -37,6 +37,7 @@ curl -X POST "http://192.168.2.1/cgi-bin/luci/;stok=1417c7cb89733ba53b0b0934886c
 ```
 curl -X POST "http://192.168.2.1/cgi-bin/luci/;stok=1417c7cb89733ba53b0b0934886caec0/api/xqsmarthome/request_smartcontroller" -d "payload=%7B%22command%22%3A%22scene_start_by_crontab%22%2C%22time%22%3A%223%3A5%22%2C%22week%22%3A0%7D"
 ```
+在SSH执行：
 ```
 date -s "2024-03-11 21:54:30"
 ```

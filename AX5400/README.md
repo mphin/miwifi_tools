@@ -36,3 +36,6 @@ curl -o /usr/libexec/sftp-server "https://fastly.jsdelivr.net/gh/mphin/Mi_Route_
 chmod 0755 /usr/libexec/sftp-server
 ```
 最后将mount --bind /data/usr/libexec /usr/libexec按照上面的方法添加进开机启动脚本
+## 声明
+
+本项目中的所有步骤、文件以及相关信息均搜集自互联网，旨在提供学习和参考之用。我们尊重并遵循知识共享的原则，未经过原创作者许可的情况下，不会用于商业用途。如果您是原始内容的作者，且不希望您的作品出现在此项目中，请联系我们，我们将立即删除相关内容。我们感谢互联网上无数开放共享的资源，为我们提供了学习的机会。

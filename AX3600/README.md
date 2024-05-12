@@ -102,7 +102,8 @@ Dumping data starting at 0x00000000 and ending at 0x00100000...
 ```
 ---
 ### 3.导入APPSBL_signed
-- 将新文件APPSBL_signed传回/tmp目录
+- [点击下载](https://raw.githubusercontent.com/mphin/Mi_Route_Tool/main/AX3600/APPSBL_signed.zip)
+- 将新文件解压后APPSBL_signed传回/tmp目录
 - 执行
 ```
 md5sum /tmp/APPSBL_signed

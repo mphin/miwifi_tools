@@ -1,5 +1,5 @@
-[AX3600相关步骤](https://github.com/mphin/Mi_Route_Tool/tree/main/AX3600/README.md)  
-[AX5400相关步骤](https://github.com/mphin/Mi_Route_Tool/tree/main/AX5400/README.md)
+[AX3600相关步骤](https://github.com/mphin/miwifi_tools/tree/main/AX3600/README.md)  
+[AX5400相关步骤](https://github.com/mphin/miwifi_tools/tree/main/AX5400/README.md)
 
 ## 新版SSH步骤：
 > 不含SSH固化  
@@ -71,7 +71,7 @@ config zone
 ## 通过防火墙添加自启动脚本
 > 用于/etc/rc.local文件无效的解决办法
 ```
-curl -o /data "https://fastly.jsdelivr.net/gh/mphin/Mi_Route_Tool@main/startup_script.sh"
+curl -o /data "https://fastly.jsdelivr.net/gh/mphin/miwifi_tools@main/startup_script.sh"
 chmod +x /data/startup_script.sh
 /data/startup_script.sh install
 ```

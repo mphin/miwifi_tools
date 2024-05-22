@@ -27,7 +27,7 @@ http://192.168.31.1/backup/log/mtd9
 sed -i 's/18\.06-SNAPSHOT/18.06.0/g' /etc/opkg/distfeeds.conf
 ```
 ```
-opkg install --force-overwrite wget unzip -d ram && /tmp/usr/bin/wget https://fastly.jsdelivr.net/gh/mphin/Mi_Route_Tool@main/AX3600/mitool.zip -O /data/mitool.zip && cd /data/ && /tmp/usr/bin/unzip /data/mitool.zip && /data/mitool_arm64 unlock
+opkg install --force-overwrite wget unzip -d ram && /tmp/usr/bin/wget https://fastly.jsdelivr.net/gh/mphin/miwifi_tools@main/AX3600/mitool.zip -O /data/mitool.zip && cd /data/ && /tmp/usr/bin/unzip /data/mitool.zip && /data/mitool_arm64 unlock
 ```
 重启后执行  
 ```
@@ -102,7 +102,7 @@ Dumping data starting at 0x00000000 and ending at 0x00100000...
 ```
 ---
 ### 3.导入APPSBL_signed
-- [点击下载](https://raw.githubusercontent.com/mphin/Mi_Route_Tool/main/AX3600/APPSBL_signed.zip)
+- [点击下载](https://raw.githubusercontent.com/mphin/miwifi_tools/main/AX3600/APPSBL_signed.zip)
 - 将新文件解压后APPSBL_signed传回/tmp目录
 - 执行
 ```

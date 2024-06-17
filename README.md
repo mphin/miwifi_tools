@@ -1,6 +1,8 @@
 [AX3600相关步骤](https://github.com/mphin/miwifi_tools/tree/main/AX3600/README.md)  
 [AX5400相关步骤](https://github.com/mphin/miwifi_tools/tree/main/AX5400/README.md)
 
+[SSH默认密码计算](https://miwifi.dev/ssh)
+
 ## 新版SSH步骤：
 > 不含SSH固化  
 
@@ -38,7 +40,8 @@ curl -X POST "http://192.168.31.1/cgi-bin/luci/;stok=1417c7cb89733ba53b0b0934886
 ```
 curl -X POST "http://192.168.31.1/cgi-bin/luci/;stok=1417c7cb89733ba53b0b0934886caec0/api/xqsmarthome/request_smartcontroller" -d "payload=%7B%22command%22%3A%22scene_start_by_crontab%22%2C%22time%22%3A%223%3A5%22%2C%22week%22%3A0%7D"
 ```
-在SSH执行：
+获取SSH默认密码[MiWiFi SSH Password Calculator](https://miwifi.dev/ssh)    
+然后在SSH执行：
 ```
 date -s "2024-03-11 21:54:30"
 ```

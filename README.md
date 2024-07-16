@@ -1,9 +1,9 @@
-[AX3600相关步骤](https://github.com/mphin/miwifi_tools/tree/main/AX3600/README.md)  
-[AX5400相关步骤](https://github.com/mphin/miwifi_tools/tree/main/AX5400/README.md)
+[Ax3600相关步骤](https://github.com/mphin/miwifi_tools/tree/main/ax3600/README.md)  
+[Ax5400电竞版相关步骤](https://github.com/mphin/miwifi_tools/tree/main/ax5400_gaming/README.md)
 
 [SSH默认密码计算](https://miwifi.dev/ssh)
 
-## 新版SSH步骤：
+## 新版SSH步骤(理论上 AX3000/AIoT AX3600/AX9000/万兆路由器/AC2100/AIoT AC2350/AX1800/AX5400 电竞版/红米 AX3000 几个型号)：
 > 不含SSH固化  
 
 windows电脑运行这条命令`cmd (conhost) / Git Bash / WSL` 不要直接CMD，然后替换下面的IP和stok，一条条执行，最后一条命令解锁SSH后在SSH执行，是修改路由器时间到当前时间，根据实际修改

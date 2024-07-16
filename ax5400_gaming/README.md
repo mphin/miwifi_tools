@@ -1,3 +1,4 @@
+## 此文件夹存放 [红米Ax5400电竞版](https://www.mi.com/shop/buy?product_id=1220600027) 相关文件
 ## [Ax5400电竞版 SSH步骤](https://github.com/mphin/miwifi_tools/blob/main/README.md#%E6%96%B0%E7%89%88ssh%E6%AD%A5%E9%AA%A4)
 ## Ax5400电竞版固化步骤：
 ```

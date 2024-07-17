@@ -1,9 +1,10 @@
-[Ax3600相关步骤](https://github.com/mphin/miwifi_tools/tree/main/ax3600/README.md)  
-[Ax5400电竞版相关步骤](https://github.com/mphin/miwifi_tools/tree/main/ax5400_gaming/README.md)
+### 此页面为通用步骤，理论上小米路由官固都支持
+[小米Ax3600相关步骤](https://github.com/mphin/miwifi_tools/tree/main/ax3600/README.md)  
+[红米Ax5400电竞版相关步骤](https://github.com/mphin/miwifi_tools/tree/main/ax5400_gaming/README.md)
 
 [SSH默认密码计算](https://miwifi.dev/ssh)
 
-## 新版SSH步骤(理论上 AX3000/AIoT AX3600/AX9000/万兆路由器/AC2100/AIoT AC2350/AX1800/AX5400 电竞版/红米 AX3000 几个型号)：
+## 新版SSH步骤(理论上AX3000/AX3600/AX9000/万兆路由器/AC2100/AC2350/AX1800/AX5400电竞版/红米AX3000等)：
 > 不含SSH固化  
 
 windows电脑运行这条命令`cmd (conhost) / Git Bash / WSL` 不要直接CMD，然后替换下面的IP和stok，一条条执行，最后一条命令解锁SSH后在SSH执行，是修改路由器时间到当前时间，根据实际修改
@@ -72,7 +73,7 @@ config zone
 	option forward 'REJECT'改为'ACCEPT'
 ```
 ## 通过防火墙添加自启动脚本
-> 用于/etc/rc.local文件无效的解决办法
+> 用于/etc/rc.local文件重启失效的解决办法
 ```
 curl -o /data "https://fastly.jsdelivr.net/gh/mphin/miwifi_tools@main/startup_script.sh"
 chmod +x /data/startup_script.sh
@@ -81,7 +82,6 @@ chmod +x /data/startup_script.sh
 编辑/data/startup_script.sh文件查找下方修改为需要执行的开机启动命令
 ```
 startup_script() {
-
         # Put your custom script here.
         echo "Starting custom scripts..."
 }

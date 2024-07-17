@@ -1,13 +1,16 @@
-### 此页面为通用步骤，理论上小米路由官固都支持
-[小米Ax3600相关步骤](https://github.com/mphin/miwifi_tools/tree/main/ax3600/README.md)  
-[红米Ax5400电竞版相关步骤](https://github.com/mphin/miwifi_tools/tree/main/ax5400_gaming/README.md)
+# 此页面为通用步骤
+[小米Ax3600相关](https://github.com/mphin/miwifi_tools/tree/main/ax3600/README.md)  
+[红米Ax5400电竞版相关](https://github.com/mphin/miwifi_tools/tree/main/ax5400_gaming/README.md)
 
-[SSH默认密码计算](https://miwifi.dev/ssh)
+[SSH默认密码计算](https://htmlpreview.github.io/?https://github.com/mphin/miwifi_tools/blob/main/miwifi_sn.html)
 
 ## 新版SSH步骤(理论上AX3000/AX3600/AX9000/万兆路由器/AC2100/AC2350/AX1800/AX5400电竞版/红米AX3000等)：
 > 不含SSH固化  
 
-windows电脑运行这条命令`cmd (conhost) / Git Bash / WSL` 不要直接CMD，然后替换下面的IP和stok，一条条执行，最后一条命令解锁SSH后在SSH执行，是修改路由器时间到当前时间，根据实际修改
+- 登录路由器后台在地址栏找到stok值，例如：
+<pre>stok=1417c7cb89733ba53b0b0934886caec0</pre>
+stok=<code>1417c7cb89733ba53b0b0934886caec0</code>替换成上面你提取到的 stok=<code>...</code> 以及下文所有192.168.31.1替换成你的路由器后台的IP
+- Windows电脑运行这条命令`cmd (conhost) / Git Bash / WSL` 不要直接CMD，然后替换下面的IP和stok，一条条执行命令：
 ```
 curl -X GET "http://192.168.31.1/cgi-bin/luci/;stok=1417c7cb89733ba53b0b0934886caec0/api/misystem/set_sys_time?time=2023-2-19%2023:4:47&timezone=CST-8"
 ```
@@ -41,14 +44,14 @@ curl -X POST "http://192.168.31.1/cgi-bin/luci/;stok=1417c7cb89733ba53b0b0934886
 ```
 curl -X POST "http://192.168.31.1/cgi-bin/luci/;stok=1417c7cb89733ba53b0b0934886caec0/api/xqsmarthome/request_smartcontroller" -d "payload=%7B%22command%22%3A%22scene_start_by_crontab%22%2C%22time%22%3A%223%3A5%22%2C%22week%22%3A0%7D"
 ```
-获取SSH默认密码[MiWiFi SSH Password Calculator](https://miwifi.dev/ssh)    
-然后在SSH执行：
+完成后获取SSH[默认密码](https://htmlpreview.github.io/?https://github.com/mphin/miwifi_tools/blob/main/miwifi_sn.html)    
+登录SSH后执行命令，请根据实际修改：
 ```
 date -s "2024-03-11 21:54:30"
 ```
-> "2024-03-11 21:54:30"为当前时间，根据实际修改
+> ⚠️"2024-03-11 21:54:30"为当前时间，根据实际修改
 
-#### ⚠️⚠️⚠️到此SSH开启成功，重启会失效，需固化SSH
+#### 到此SSH开启成功，重启会失效，需固化SSH
 ## 静态路由防火墙配置：
 开机会失效，需同时添加到在/etc/rc.local文件exit 0前追加   
 > 例如：所有发送到192.168.2.0/24网络的数据包通过网关192.168.31.254进行转发
